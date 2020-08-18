@@ -14,18 +14,26 @@ class Loadout:
         self.underbarrel = []
 
     def printOut(self):
-            return "{} {} {} {} {} {} {} {} {}".format(self.gun, self.barrel, self.perks, self.optic, self.muzzle, self.laser,self.grip,self.ammo,self.underbarrel) 
+            return "{} {} {} {} {} {} {} {} {}".format(self.gun, self.barrel, self.perks, self.optic, self.muzzle, self.laser,self.grip,self.ammo,self.underbarrel)
 
 guns = ['M91', 'M4', 'M13', 'AK-47','Origen 12']
-pistols = ['Magnum', 'Desert Eagle', 'Renetti', 'RPG', 'Strela']
-optics = ['VLK', 'Monocle Reflex', 'Viper Reflex']
-grip = ['Stippled Grip', 'Literally Sandpaper']
-ammo = ['30 Rounds','50 Rounds', '200 Rounds']
+pistols = ['X16', '1911', '.357', 'M19', '.50 GS', 'Renetti']
+BoomKnives = ['RPG', 'Strela-P', 'JOKR', 'PILA', 'Combat Knife', 'Kali Sticks', 'Dual Kodachis']
+Secondary = [pistols, BoomKnives]
+
+optics = ['VLK', 'Monocle Reflex', 'Viper Reflex', 'Operator Reflex Sight', 'Corp Combat Halo Sight', 'Aim-Op Reflex Sight', 'G.I. Mini Reflex', 'Scout Combat Optic',
+'APX5 Holographic Sight', 'Cronen LP945 Mini Reflex', '4.0x Flip Hybrid', 'VLK 3.0x Optic', 'Integral Hybrid', 'Variable Zoom Scope', 'Canted Hybrid',
+'Solozero Optics Mini Reflex', 'Thermal Hybrid', 'PBX Holo 7 Sight', 'Merc Thermal Optic', 'Sniper Scope', 'Monocle Reflex Sight', 'Solozero NVG Enhanced',
+'Cronen C480 Pro Optic']
+grip = ['Stippled Grip', 'Granulated Grip Tape', 'Rubberized Grip Tape']
+ammo = ['50 Rounds','60 Rounds', '100 Rounds']
 laser = ['Tac Laser', '1mW Laser', '5mW Laser']
-muzzle = ['Compensator', 'Suppressor']
-perks = ['Fully Loaded', 'FMJ']
+muzzle = ['Compensator', 'Tactical Suppresor', 'Muzzle Brake', 'Lightweight Suppresor', 'Monolithic Suppresor', 'Flash Guard', 'Breacher Device']
+perks = ['Fully Loaded', 'FMJ', 'Presence of Mind', 'Frangible - Disabling', 'Burst', 'Fast Melee', 'Sleight of Hand', 'Mo Money', 'Frangible - Wounding', 'Recon', 'Heavy Hitter']
 barrel = ['Extended Barrel', 'No barrel']
-stocks = ['Short stock', 'No Stock']
+underbarrel = ['Commando Foregrip', 'Bipod', 'Ranger Foregrip', 'Operator Foregrip', 'M203 40mm Incendiary', 'Tactical Foregrip', 'M203 40mm Flash', 'M203 40mm High-Explosive', 'M203 40mm Recon', '12-Gauge Deputy', 'M203 40mm Smokescreen']
+stocks = ['FORGE TAC Ultralight', 'No Stock', 'Singuard Arms Sniper Prowler', 'FSS Close Quarters Stock']
+
 perks1 = ['Scavenger', 'Cold Blooded', 'Kill Chain', 'Quick Fix']
 perks2 = ['Restock', 'Overkill', 'High Alert', 'Ghost']
 perks3 = ['Tune up', 'Amped', 'Shrapnel', 'Battle Hardened']
@@ -49,29 +57,31 @@ def getLoadout():
         overKill()
     else:
         notoverKill()
-    print(random.choice(perks1))
+    print("\n{}".format(random.choice(perks1)))
     print(p)
-    print(random.choice(perks3))
+    print("{}\n".format(random.choice(perks3)))
 
 def notoverKill():
-    lists = [optics, grip, ammo, laser, muzzle, perks, barrel, stocks]
-    x = random.choice(pistols)
-    if x == 'RPG' or 'Strela':
-        print('\n{}\n'.format(x))
-        #return
-    i = 1
-    count = 5
-    print('\n{}'.format(x))
-    while i <= count:
-        a = random.choice(lists)
-        a1 = random.choice(a)
-        lists.remove(a)
-        i += 1
-        print(a1)
-    return
+    lists = [optics, grip, ammo, laser, muzzle, perks, barrel, underbarrel, stocks]
+    x = random.choice(Secondary)
+    x1 = random.choice(x)
+    if x1 in BoomKnives:
+        print('\n{}'.format(x1))
+        return
+    else:
+        i = 1
+        count = 5
+        print('\n{}'.format(x1))
+        while i <= count:
+            a = random.choice(lists)
+            a1 = random.choice(a)
+            lists.remove(a)
+            i += 1
+            print(a1)
+        return
 
 def overKill():
-    lists = [optics, grip, ammo, laser, muzzle, perks, barrel, stocks]
+    lists = [optics, grip, ammo, laser, muzzle, perks, barrel, underbarrel, stocks]
     x = random.choice(guns)
     print('\n{}'.format(x))
     i = 1
@@ -85,8 +95,6 @@ def overKill():
     return
 
 
-y = Loadout(random.choice(guns))
 getLoadout()
-y.printOut()
-
-    
+getLoadout()
+getLoadout()
