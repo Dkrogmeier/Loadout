@@ -1,16 +1,18 @@
 import random
 
 guns = ['Kilo 141', 'Oden', 'M4A1', 'M13', 'FAL', 'SCAR-17', 'FR 5.56', 'AK-47', 'RAM-7', 'GRAU 5.56',
-'CR-56 AMAX', 'AN-94', 'SA87', 'PKM', 'MG34', 'M91', 'Holger-26', 'Bruen MK9', "Fennec", 'MP5', 'MP7', 'AUG', 'UZI', 'Bizon', 'P90', 'ISO']
-#primary = [kilo141, oden, m4, m13, fal, scar, fr, ak, ram, grau, amax, an, sa87, pkm, mg34, m91, holger, bruen, fennec, mp5, mp7, aug, uzi, bizon, p90, iso]
+'CR-56 AMAX', 'AN-94', 'SA87', 'PKM', 'MG34', 'M91', 'Holger-26', 'Bruen MK9', "Fennec", 'MP5', 'MP7', 'AUG',
+        'UZI', 'Bizon', 'P90', 'ISO','Dragunov', 'HDR', 'AX-50','Rytec AMR', 'MK2 Carbine', 'M14 EBR', 'Kar-98k', 'SKS', 'Crossbow', 'Striker 45', 'Model 680 Shotgun', '725 Shotgun', 'R9-0 Shotgun', 'Origin 12', 'VLK Rogue']
+#primary = [kilo141, oden, m4, m13, fal, scar, fr, ak, ram, grau, amax, an, sa87, pkm, mg, m91, holger,
+#bruen, fennec, mp5, mp7, aug, uzi, bizon, p90, iso, drag, hdr, ax, rytec, carbine, ebr, kar, sks, bow, striker, model, seventwo, r9, origin, rogue]
 pistols = ['X16', '1911', '.357', 'M19', '.50 GS', 'Renetti']
 #secondary = [x16, nineteen, magnum, m19, gs, renetti]
 BoomKnives = ['RPG', 'Strela-P', 'JOKR', 'PILA', 'Combat Knife', 'Kali Sticks', 'Dual Kodachis']
 #thepunch = [rpg, strela, jokr, pila, knife, kali, kodachi]
 Secondary = [pistols, BoomKnives]
-lethal = []
-tactical = []
-Explosives =[lethal, tactical]
+lethal = ['Claymore', 'Frag Grenade', 'Molotov Cocktail', 'C4', 'Semtex', 'Throwing Knife', 'Proximity', 'Thermite', 'Flaming Throwing Knife']
+tactical = ['Flash Grenade', 'Stun Grenade', 'Smoke Grenade', 'Snapshot Grenade', 'Heartbeat Sensor', 'Gas Grenade', 'Stim', 'Decoy Grenade']
+
 
 
 optics = ['Monocle Reflex', 'Viper Reflex Sight', 'Operator Reflex Sight', 'Corp Combat Halo Sight', 'Aim-Op Reflex Sight', 'G.I. Mini Reflex', 'Scout Combat Optic',
@@ -32,6 +34,7 @@ underbarrel = ['Commando Foregrip', 'Bipod', 'Ranger Foregrip', 'Operator Foregr
 perks1 = ['Scavenger', 'Cold Blooded', 'Kill Chain', 'Quick Fix', 'Double Time', 'E.O.D']
 perks2 = ['Restock', 'Overkill', 'High Alert', 'Ghost', 'Hardline', 'Pointman']
 perks3 = ['Tune up', 'Amped', 'Shrapnel', 'Battle Hardened', 'Spotter', 'Tracker']
+
 
 #-----------------------------------------Assault Rifles-------------------------------------------------------------------
 kiloBarrel = ['Singuard Arms 16.6 SOCOM', 'Singuard Arms 19.8 Prowler', 'Singuard Arms Whisper']
@@ -102,6 +105,7 @@ anStock = ['AN-94 Factory Heavy', 'Forge TAC Ultralight', 'Folded Stock', 'FSS C
 anAmmo = ['45 Round Mags', '60 Round Casket Mags']
 an = [optics, grip, laser, anMuzzle, perks, underbarrel, anAmmo, anBarrel, anStock]
 
+
 #---------------------------------Pistols---------------------------------
 pmuzzle = ['Flash Guard', 'Monolithic Suppresor', 'Muzzle Brake', 'Oil Can Suppresor', 'Compensator','Lightweight Suppresor', 'Tactical Suppresor']
 trigger = ['Lightweight Trigger', 'Heavy Duty Trigger', 'Match Grade Trigger']
@@ -121,6 +125,7 @@ magnum = [laser, pperks, nineTA,]
 m19 = [pmuzzle, laser, pperks, nineOptic, nineTA, grip]
 gs = [pmuzzle, laser, pperks, nineTA, grip]
 renetti = [pmuzzle, laser, pperks]
+
 
 #----------------------------------SMGS------------------------------------------------------------------------------
 fenMuzzle = ['Flash Guard', 'Muzzle Brake', 'CQB Breacher Device', 'Tactical Suppresor', 'Monolithic Suppresor', 'ZLR Sabre', 'Compensator']
@@ -160,33 +165,111 @@ p90Barrel = ['FORGE TAC Retribution','FSS 10.6" Pro']
 p90Stock = ['FORGE TAC CQB Comb','Fly Strap','FSS Heavy Stock Pro']
 p90 = [laser, grip, muzzle, opticslite, perkslite, grip, p90Barrel, p90Stock]
 
-strStock = []
-strAmmo = []
-strBarrel = []
-striker = [laser, grip]
+strStock = ['FSS Guardian','FTAC Precision Fixed Stock','XRK Gen III Survivalist Series']
+strAmmo = ['.45 Hollow Point 12-R Mags','45 Round Mags']
+strBarrel = ['300mm Poly Barrel','400mm Stainless Steel','150mm Stainless Steel']
+strGrip = ['FTAC 60 Series Polymer','FTAC G-5 EXO','FTAC 60 Series Rubber']
+strUnder = ['Commando Foregrip','Merc Foregrip','Tactical Foregrip','Ranger Foregrip','Operator Foregrip']
+striker = [laser, grip, muzzle, strBarrel, strAmmo, strStock, strUnder]
 
 isoBarrel = ['FTAC 225mm Dominator','FSS Revolution','ISO 140mm CQB','FSS Nightshade']
 isoStock = ['FORGE TAC Ultralight','FORGE TAC Stalker','FTAC Vagrant','ISO Collapsible']
 isoGrip = ['FSS Vice ISO Grip','FTAC Elite ISO Grip','ISO Tac-Form']
 isoAmmo = ['30 Round Mags','50 Round Drums']
 iso = [laser, grip, perkslite, mp5Under, opticslite, isoBarrel, isoStock, isoGrip, isoAmmo]
+
+
+
+
 #-------------------------------Sniper Rifles-----------------------------
-drag = [laser, muzzle, perks]
-hdr = [laser, muzzle, perks]
-ax = [laser, muzzle, perks]
-rytec = [laser, muzzle, perks]
+dragBarrel= ['510mm Compact Barrel', '660mm Extended Barrel']
+dragLaser = ['Tac Laser']
+dragOptic = ['Scout Combat Optic', 'VLK 3.0x Optic', 'Merc Thermal Optic', 'Thermal Dual Power Scope', 'Variable Zoom Scope', 'Thermal Sniper Scope',
+            'Cronen C480 Pro Optic']
+dragStock = ['FTAC Hunter-Scout','Skeleton Stock', 'VLK Lightweight Stock', 'FTAC Stalker-Scout']
+dragAmmo = ['15 Round Mags', '20 Round Mags']
+dragUnder = ['Bipod']
+drag = [dragLaser, muzzle, perkslite, dragBarrel,dragOptic, dragStock, dragAmmo, dragUnder]
+
+hdrStock = ['FTAC Stalker-Scout','FTAC Hunter-Scout','FSS Nomad Stock','FTAC Champion']
+hdrAmmo = ['7 Round Mags', '9 Round Mags']
+hdrBarrel = ['26.9" HDR Pro','26.0" Bull Barrel','17.2" Bull Barrel']
+hdr = [dragLaser, muzzle, perkslite, dragOptic, dragUnder, hdrAmmo, hdrBarrel, hdrStock]
+
+axStock = ['Singuard Arms Marksman','Singuard Arms Evader', 'Singuard Arms Assassin']
+axBarrel = ['Singuard Arms Pro','17.0" Factory Barrel','32.0" Factory Barrel' ]
+ax = [dragLaser, muzzle, perkslite,dragOptic,dragUnder,hdrAmmo, grip, axStock, axBarrel]
+
+ryMuzzle = ['XRK Tank Brake','Rytec AMR Suppressor']
+ryBarrel = ['FTAC Seven Straight','FTAC 448mm Dictator','XRK Harbinger']
+ryStock = ['XRK Mastadon','FTAC Trekker','STOVL Tac-Wrap']
+ryAmmo = ['25×59mm Explosive 5-R mag','25×59mm Thermite 5-R mag']
+rytec = [laser, perkslite,dragOptic,dragLaser,grip,ryStock, ryMuzzle, ryBarrel, ryAmmo]
+
+
 #------------------------------Marksman Rifles----------------------------
-carbine = [muzzle, optics, grip, perks]
-ebr = [muzzle, optics, grip, perks]
-kar = [muzzle, optics, grip, perks]
-sks = [muzzle, optics, grip, perks]
-bow = [muzzle, optics, grip, perks]
+carBarrel = ['FSS 18.0" Factory','FSS 20.0" Factory','FSS 24.0" Factory']
+carStock = ['Cartridge Sleeve','FSS MK2 Sport Comb','FSS MK2 Precision Comb','MK2 Ultralight Hollow']
+carbine = [muzzle, optics, grip, perkslite, dragLaser, carBarrel, carStock]
+
+ebrBarrel = ['FORGE TAC Precision 20.0"','FORGE TAC Elite','FORGE TAC Precision 22.0"']
+ebrStock = ['FTAC Precision Comb','FSS Raider Chassis Pro','FTAC Lightweight Stock','FSS Raider Chassis Elite']
+ebrAmmo = ['15 Round Mags','20 Round Mags']
+ebrUnder = ['Commando Foregrip','Tactical Foregrip','Bipod','Merc Foregrip','Ranger Foregrip','Operator Foregrip']
+ebr = [muzzle, optics, perkslite, dragLaser, ebrBarrel, ebrStock, ebrAmmo, ebrUnder]
+
+karBarrel = ['Singuard Custom 25.1"','Singuard Custom 21.2"','Singuard Custom 27.6"']
+karStock =['STVOL Precision Comb','Hollow Stock Mod','FTAC Sport Comb']
+kar = [muzzle, optics, grip, perkslite, dragLaser, karBarrel, karStock, dragUnder]
+
+sksBarrel = ['FTAC Landmark','16" FSS Para','22" FSS M59/66']
+sksStock = ['SKS Rifle Stock','FTAC Hunter-Scout','Sawed-off Stock']
+sksAmmo = ['30 Round Mags','10 Round Mags']
+sks = [muzzle, optics, grip, perkslite, dragLaser, sksBarrel, sksStock, sksAmmo]
+
+bowStock = ['FORGE TAC Apex','FORGE TAC Dart CB','FORGE TAC SpeedTrak']
+bowBolt = ['FTAC Fury 20" Bolts','FTAC Venom 20" Bolts','FTAC Backburn 20" Bolts']
+bowUnder = ['FTAC Speed Grip','XRK Precision Grip','XRK Talon']
+bowCable = ['16-Strand Cable','28-Strand Cable']
+bowArms = ['XRK Thunder 200 Lb','XRK Quill 100 Lb','XRK Carbon Elite']
+bow = [optics, perkslite, dragLaser, bowStock, bowBolt, bowUnder, bowCable, bowArms]
 #-----------------------------Shotguns------------------------------------
-model = [laser, grip, perks]
-seventwo = [laser, grip, perks]
-r9 = [laser, grip, perks]
-origin = [laser, grip, perks]
-rogue = [laser, grip, perks]
+
+
+oriMuzzle = ['Breacher Device','Flash Guard','Tactical Suppressor','Muzzle Brake','Compensator','Choke','Lightweight Suppressor','Monolithic Suppressor']
+oriOptics = ['Monocle Reflex', 'Viper Reflex Sight', 'Operator Reflex Sight', 'Corp Combat Halo Sight', 'Aim-Op Reflex Sight', 'G.I. Mini Reflex', 'Scout Combat Optic',
+            'APX5 Holographic Sight', 'Cronen LP945 Mini Reflex', 'VLK 3.0x Optic',
+            'Solozero Optics Mini Reflex', 'PBX Holo 7 Sight', 'Monocle Reflex Sight', 'Solozero NVG Enhanced','Cronen C480 Pro Optic']
+modelBarrel = ['XRK 18.0 Liberator', 'XRK 14.0 SWAT', 'XRK 30.0 Sport']
+modelStock = ['FTAC Hunter','FORGE TAC Ultralight','No Stock','Lockwood Precision Series', 'FTAC Stalker-12']
+modelUnder = ['Commando Foregrip','Merc Foregrip','Tactical Foregrip','Ranger Foregrip','Operator Foregrip', 'Lockwood Precision Series', 'XRK Truegrip Tactical']
+modelAmmo = ['Tube Extensions','Slug Rounds', '12 Gauge 6-R Mags', 'Slug 6-R Mags', 'Dragons Breath Rounds']
+model = [laser, grip, perkslite, oriMuzzle, oriOptics]
+
+sevenBarrel = ['Tempus Smooth Bore','Sawed-off Barrel','Tempus 32" Competition']
+sevenStock = ['Cronen Equilibrium','Cronen Pro Light','Sawed-off Stock','Tempus Sport']
+sevenGuard = ['Tempus SlimGrip','FORGE TAC Steady Grip','FORGE TAC Commander']
+sevenAmmo = ['Slug Rounds']
+sevenUnder = ['Commando Foregrip','Merc Foregrip','Tactical Foregrip','Ranger Foregrip','Operator Foregrip']
+seventwo = [laser, perkslite, oriMuzzle, oriOptics, sevenBarrel, sevenStock, sevenGuard, sevenAmmo, sevenUnder]
+
+r9Barrel = ['FORGE TAC Sentry','FORGE TAC Gemini']
+r9Pumps = ['FSS R9-0 Bulldog','FTAC Ultralight Pump','FTAC Close Quarters Pro']
+r9Ammo = ['Tube Extensions','Slug Rounds']
+r9Under = ['Merc Foregrip','Ranger Foregrip','Operator Foregrip']
+r9 = [laser, grip, perkslite, oriMuzzle, r9Barrel, r9Pumps, r9Ammo, r9Under]
+
+oriBarrel = ['FORGE TAC Precision','FORGE TAC Wideshot','FORGE TAC Impaler']
+oriStock = ['FTAC Hunter','FORGE TAC Ultralight','No Stock','FORGE TAC Dart']
+oriAmmo = ['12 Round Mags','8 Round Slug Mags','25 Round Drum Mags']
+oriUnder = ['Merc Foregrip','Commando Foregrip']
+origin = [laser, grip, perkslite, oriOptics, oriUnder, oriAmmo, oriStock, oriMuzzle, oriBarrel]
+
+rogueGrip = ['XRK Race Grip','VLK Prime Pump Grip','XRK ReliaGrip']
+rogueAmmo = ['12 Round Mags','8 Round Slug Mags','4 Round Mags',"Dragon's Breath Rounds"]
+rogueBarrel = ['VLK Czar','6" Revolt','16" Warlord']
+rogueStock = ['FTAC Hunter', 'FORGE TAC Ultralight', 'No Stock', 'FSS Close Quarters Stock']
+rogue = [oriMuzzle, laser, grip, perkslite, oriOptics, rogueGrip, rogueAmmo, rogueBarrel, rogueStock]
 #----------------------------LMGS----------------------------------------
 saBarrel = ['18.2 Factory', '25.4 Factory', '12.4 Factory']
 saStock = ['Heavy Stock Pro', 'Ultralight Hollow', 'TAC CQB Comb']
@@ -222,7 +305,10 @@ bruen = [muzzle, optics, grip, perks, laser, saUnder, bruBarrel, bruStock, bruAm
 #------------------------------------LOADOUT--------------------------------------------------------
 def getLoadout():
     p = random.choice(perks2)
-    primary = [kilo141, oden, m4, m13, fal, scar, fr, ak, ram, grau, amax, an, sa87, pkm, mg, m91, holger, bruen, fennec, mp5, mp7, aug, uzi, bizon, p90, iso]
+    primary = [kilo141, oden, m4, m13, fal, scar, fr, ak, ram, grau, amax, an, sa87, pkm, mg, m91, holger,
+    bruen, fennec, mp5, mp7, aug, uzi, bizon, p90, iso, drag, hdr, ax, rytec, carbine, ebr, kar, sks, bow, striker, model, seventwo, r9, origin, rogue]
+    g = random.choice(lethal)
+    g2 = random.choice(tactical)
     i = 1
     count = 5#int(input("Enter # of attachments 0-5: "))
     #while count > 5 or count < 0:
@@ -249,6 +335,8 @@ def getLoadout():
     print("\n{}".format(random.choice(perks1)))
     print(p)
     print("{}\n".format(random.choice(perks3)))
+    print("Lethal: {}".format(g))
+    print("Tactical: {}\n".format(g2))
 
 
 
@@ -276,8 +364,8 @@ def notoverKill():
         return
 
 def overKill():
-    primary = [kilo141, oden, m4, m13, fal, scar, fr, ak, ram, grau, amax, an, sa87, pkm, mg, m91, holger, bruen]
-    #guns = ['Kilo 141', 'Oden', 'M4A1', 'M13', 'FAL', 'SCAR-17', 'FR 5.56', 'AK-47', 'RAM-7', 'GRAU 5.56', 'CR-56 AMAX', 'AN-94']
+    primary = [kilo141, oden, m4, m13, fal, scar, fr, ak, ram, grau, amax, an, sa87, pkm, mg, m91, holger,
+    bruen, fennec, mp5, mp7, aug, uzi, bizon, p90, iso, drag, hdr, ax, rytec, carbine, ebr, kar, sks, bow, striker, model, seventwo, r9, origin, rogue]
     x = random.choice(guns)
     z = guns.index(x)
     print('\n{}'.format(x))
@@ -294,3 +382,4 @@ def overKill():
 
 
 getLoadout()
+
