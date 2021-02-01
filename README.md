@@ -6,4 +6,4 @@ Built using Flask framework from pythonanywhere.com.
 
 Contains use of CSS features for website design. 
 
-Live Website: wzbravery.com
+Website: http://wzbravery.com/
